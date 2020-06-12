@@ -5,7 +5,7 @@ module.exports = {
   pathPrefix: "/",
   title: "Blog by Hawaijar",
   subtitle:
-    "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "Personal blogs of Hawaijar",
   copyright: "© All rights reserved.",
   disqusShortname: "",
   postsPerPage: 4,
