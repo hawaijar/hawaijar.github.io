@@ -28,7 +28,7 @@ module.exports = {
   author: {
     name: "Hawaijar",
     photo: "/photo.svg",
-    bio: "Web enthusiast, JAMStack lover (Gatsby), Admirer of algorithms, ...",
+    bio: "Web enthusiast, hawaijar (an exotic Manipuri dish) lover ❤️...",
     contacts: {
       email: "",
       facebook: "#",
