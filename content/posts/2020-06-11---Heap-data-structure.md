@@ -1,5 +1,5 @@
 ---
-title: My mental model on Heap Structure
+title: My mental model for Heap Structure
 date: "2020-06-11T23:46:37.121Z"
 template: "post"
 draft: false
@@ -83,4 +83,3 @@ This explains the reason why we describe Heap structure as a Binary Tree but usu
 I know this topic is in the longer side. We would also like to discuss the a) complexity of heap structure, b) implementation in Javascript and also c) two primary applications of heap data structure - 1) **Merging K-Sorted arrays** and 2) **Djikstra's shortest path algorithm**
 
 We shall discuss the remaining topic next time. So, stay tuned!
-
