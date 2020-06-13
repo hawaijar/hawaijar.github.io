@@ -24,7 +24,7 @@ Here's a quick take-away if you don't want to read the whole thing.
 
 > They're conveniently implemented using an array.
 
-> For a parent node at index 'n', you'll find their children at **2(n + 1)** and **2(n + 2)** indices.
+> For a parent node at index 'n', you'll find their children at **(2n + 1)** and **(2n + 2)** indices.
 
 > For a node at index 'n', you'll find its parent at index **Floor(n - 1)/2**
 
@@ -74,13 +74,13 @@ And imagine, we map each element to an array as shown below -
 
 Voila! we mapped the binary tree into an array representation. And interesting thing is that, any array element can be treated as a parent node and all its children (which is on its right side, not necessarily adjacent one) will always be greater than or equal to its value. We now satisfied the heap property.
 
-Also, for any array element (read as node in binary heap) at array index "n", you'll find its children (left and right child) at 2(n + 1) and 2(n + 2) respectively.
+Also, for any array element (read as node in binary heap) at array index "n", you'll find its children (left and right child) at <u>(2n + 1) and (2n + 2)</u> indices respectively. And for a node at array index "n", its parent would be found at <u>Floor(n - 1)/2</u> as well.
 
 Finally, coming to the addition and deletion of items in Binary heap (refer TLDR above), the algorithm demands inserting element at the end or beginning of an array and that is a constant time, O(1) complexity in array, which is not so in a binary tree.
 
-This explains the reason why we describes Heap structure as a Binary Tree but implemented rather as an Array structure.
+This explains the reason why we describe Heap structure as a Binary Tree but usually implement rather as an Array structure.
 
-I know this topic is in the longer side. We would also like to discuss the implementation and also two primary applications of heap data structure - 1) **Merging K-Sorted arrays** and 2) **Djikstra's shortest path algorithm**
+I know this topic is in the longer side. We would also like to discuss the a) complexity of heap structure, b) implementation in Javascript and also c) two primary applications of heap data structure - 1) **Merging K-Sorted arrays** and 2) **Djikstra's shortest path algorithm**
 
-We shall discuss these two in the next section. Stay tuned!
+We shall discuss the remaining topic next time. So, stay tuned!
 

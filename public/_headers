@@ -122,7 +122,7 @@
   Link: </component---src-templates-page-template-js-18e9587ba03ceee1c563.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/pages/contacts/page-data.json>; rel=preload; as=fetch; crossorigin
-/posts/heap-data-structure
+/posts/Heap-data-structure
   Link: </webpack-runtime-98b643dc5d42c7734a22.js>; rel=preload; as=script
   Link: </styles-9b6f388623a2ec93d35f.js>; rel=preload; as=script
   Link: </framework-a637a1184279c82debe4.js>; rel=preload; as=script
@@ -133,7 +133,7 @@
   Link: </643651a62fb35a9bb4f20061cb1f214a352d7976-25f782996272349739b7.js>; rel=preload; as=script
   Link: </component---src-templates-post-template-js-da4e74fee0f591b0c965.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/posts/heap-data-structure/page-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/posts/Heap-data-structure/page-data.json>; rel=preload; as=fetch; crossorigin
 /tag/array
   Link: </webpack-runtime-98b643dc5d42c7734a22.js>; rel=preload; as=script
   Link: </styles-9b6f388623a2ec93d35f.js>; rel=preload; as=script
