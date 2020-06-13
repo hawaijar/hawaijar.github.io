@@ -3,7 +3,7 @@ title: My mental model on Heap Structure
 date: "2020-06-11T23:46:37.121Z"
 template: "post"
 draft: false
-slug: "perfecting-the-art-of-perfection"
+slug: "Heap-data-structure"
 category: "Data Structure"
 tags:
   - "Data Structure"
