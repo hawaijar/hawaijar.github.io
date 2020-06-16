@@ -1,5 +1,5 @@
 ---
-title: My mental model for Heap Structure
+title: My mental model for Heap Structure (Part 1)
 date: "2020-06-11T23:46:37.121Z"
 template: "post"
 draft: false
