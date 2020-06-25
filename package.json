@@ -43,6 +43,7 @@
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "codecov": "^3.6.5",
+    "framer-motion": "^1.11.1",
     "gatsby": "^2.23.3",
     "gatsby-link": "^2.3.2",
     "gatsby-plugin-catch-links": "^2.2.1",
