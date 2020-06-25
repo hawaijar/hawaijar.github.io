@@ -2,15 +2,15 @@ import React from 'react';
 
 const Node = ({value, position}) => {
     return (
-      <svg width="75" height="90">
+      <svg width="60" height="100">
         <g id="container-node">
           <g id="node">
-            <circle className="node-circle" cx="45%" cy="45%" r="32" fill="#1f77b4" />
+            <circle className="node-circle" cx="45%" cy="45%" r="22" fill="#1f77b4" />
             <text
               className="node-value"
               x={value < 10? "48%": "47%"}
               y="45%"
-              fontSize="2rem"
+              fontSize="1.2rem"
               fill="white"
               textAnchor="middle"
               alignmentBaseline="central"
@@ -21,8 +21,8 @@ const Node = ({value, position}) => {
           </g>
           <text
             fill="black"
-            x="50%"
-            y="83"
+            x="47%"
+            y="78"
             fontSize="1rem"
             textAnchor="middle"
             alignmentBaseline="central"
