@@ -22,6 +22,7 @@ module.exports = {
         name: "pages"
       }
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: "gatsby-source-filesystem",
       options: {

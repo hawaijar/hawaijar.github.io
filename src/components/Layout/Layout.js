@@ -2,9 +2,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { withPrefix } from 'gatsby';
+import { MDXProvider } from "@mdx-js/react"
 import type { Node as ReactNode } from 'react';
 import { useSiteMetadata } from '../../hooks';
 import styles from './Layout.module.scss';
+import BinaryNode from '../BinaryNode';
 
 type Props = {
   children: ReactNode,
@@ -12,6 +14,8 @@ type Props = {
   description?: string,
   socialImage? :string
 };
+const Hello = () => <div>Hello World!</div>
+const shortcodes = { BinaryNode, Hello }
 
 const Layout = ({
   children,
@@ -36,7 +40,7 @@ const Layout = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
-      {children}
+      <MDXProvider components={shortcodes}>{children}</MDXProvider>
     </div>
   );
 };
