@@ -37,6 +37,19 @@ const buildSVG = (array = defaultArray) => {
     }
     return result;
 };
+const buildIndices = (array = defaultArray) => {
+    let start = -1 * XOFFSET + STARTX;
+    let result = [];
+    let index = 0;
+    for (let item of defaultArray) {
+        start = start + XOFFSET;
+        result.push(
+            <text transform={`translate(${start} 313.4)`}>{index}</text>
+        )
+        index += 1;
+    }
+    return result;
+};
 
 const HeapContainer = (props) => {
 
@@ -84,14 +97,7 @@ const HeapContainer = (props) => {
                 <path strokeDasharray="4.97 4.97" d="M1203.5 7.97v375.54" />
             </g>
             <g fontSize={22} fontFamily="MyriadPro-Regular, Myriad Pro">
-                <text transform="translate(1131.76 314.97)">{"7"}</text>
-                <text transform="translate(970.29 313.4)">{"6"}</text>
-                <text transform="translate(820.29 313.4)">{"5"}</text>
-                <text transform="translate(670.29 313.4)">{"4"}</text>
-                <text transform="translate(520.29 313.4)">{"3"}</text>
-                <text transform="translate(370.29 313.4)">{"2"}</text>
-                <text transform="translate(220.29 313.4)">{"1"}</text>
-                <text transform="translate(70.29 313.4)">{"0"}</text>
+                {buildIndices()}
             </g>
             <g>
                 {buildSVG()}
