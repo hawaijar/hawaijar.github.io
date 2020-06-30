@@ -7,23 +7,22 @@ const XOFFSET = 145;
 const YOFFSET = 254;
 const STARTX = 78;
 const TRANSFORMX_OFFSET = 7.36;
-const TRANSFORMY_OFFSET = 9;
 
 const defaultArray = [50, 30, 2, 10, 1, 5, 20, 3];
 
 const buildSVG = (array = defaultArray) => {
-    let start = -1 * XOFFSET + STARTX;
+    let startx = -1 * XOFFSET + STARTX;
     let result = [];
 
     for (let item of defaultArray) {
-        start = start + XOFFSET;
+        startx = startx + XOFFSET;
         result.push(
             <g data-name={item}>
                 <g fill="#1f77b4">
-                    <circle cx={start} cy={YOFFSET} r={RADIUS} />
+                    <circle cx={startx} cy={YOFFSET} r={RADIUS} />
                 </g>
                 <text
-                    transform={`translate((start - ${TRANSFORMX_OFFSET}) 263)`}
+                    transform={`translate(${startx - TRANSFORMX_OFFSET} 263)`}
                     fontSize={30}
                     fill="#fff"
                     stroke="#fff"
@@ -52,7 +51,6 @@ const buildIndices = (array = defaultArray) => {
 };
 
 const HeapContainer = (props) => {
-
     const CHILD_VALUE = 5;
     const PARENT_VALUE = 30;
 
@@ -62,7 +60,7 @@ const HeapContainer = (props) => {
         let parent = document.querySelector(`[data-name="${PARENT_VALUE}"]`);
         const parentX = parent.getBBox().x + RADIUS;
         let parentPositionX = parentX - childX;
-        // child to parent
+        // (moving)child to parent
         gsap.to(child, {
             duration: 3,
             ease: "power1.inOut",
@@ -71,7 +69,7 @@ const HeapContainer = (props) => {
                 type: "cubic"
             }
         });
-        // parent to child
+        // (moving)parent to child
         parentPositionX = childX - parentX;
         gsap.to(parent, {
             duration: 3,
