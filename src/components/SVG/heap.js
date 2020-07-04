@@ -1,20 +1,27 @@
-import React, { useEffect, useRef } from "react";
-import gsap, { TimelineMax } from "gsap";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-gsap.registerPlugin(MotionPathPlugin);
+import React from 'react';
+
+const {useEffect, useRef} = React;
 const RADIUS = 35.5;
 const XOFFSET = 145;
 const YOFFSET = 254;
 const STARTX = 78;
-const TRANSFORMX_OFFSET = 7.36;
+const TRANSFORMX_OFFSET = 10;
 
 const defaultArray = [50, 30, 2, 10, 1, 5, 20, 3];
+
+/* Adjust the number portion of the node based on numerical size */
+const getTransformOffsetX = num => {
+  if(num < 10) return 7;
+  if(num < 99) return 12;
+  if(num < 999) return 22;
+  if(num >= 9999) return 25;
+}
 
 const buildSVG = (array = defaultArray) => {
     let startx = -1 * XOFFSET + STARTX;
     let result = [];
 
-    for (let item of defaultArray) {
+    for (let item of array) {
         startx = startx + XOFFSET;
         result.push(
             <g data-name={item}>
@@ -22,7 +29,7 @@ const buildSVG = (array = defaultArray) => {
                     <circle cx={startx} cy={YOFFSET} r={RADIUS} />
                 </g>
                 <text
-                    transform={`translate(${startx - TRANSFORMX_OFFSET} 263)`}
+                    transform={`translate(${startx - getTransformOffsetX(item)} 263)`}
                     fontSize={30}
                     fill="#fff"
                     stroke="#fff"
@@ -40,7 +47,7 @@ const buildIndices = (array = defaultArray) => {
     let start = -1 * XOFFSET + STARTX;
     let result = [];
     let index = 0;
-    for (let item of defaultArray) {
+    for (let item of array) {
         start = start + XOFFSET;
         result.push(
             <text transform={`translate(${start} 313.4)`}>{index}</text>
@@ -51,8 +58,10 @@ const buildIndices = (array = defaultArray) => {
 };
 
 const HeapContainer = (props) => {
-    const CHILD_VALUE = 5;
-    const PARENT_VALUE = 30;
+    let {array, child:CHILD_VALUE, parent:PARENT_VALUE} = props;
+    array = array || defaultArray;
+    CHILD_VALUE = CHILD_VALUE || defaultArray[0];
+    PARENT_VALUE = PARENT_VALUE || defaultArray[defaultArray.length - 1];
 
     useEffect(() => {
         let child = document.querySelector(`[data-name="${CHILD_VALUE}"]`);
@@ -82,23 +91,23 @@ const HeapContainer = (props) => {
         })
     }, [])
     return (
-        <svg viewBox="0 0 1204 389" {...props}>
+        <svg viewBox={`0 0 ${150 * array.length} 389`} {...props}>
             <path fill="#fff" d="M.5.5h1203v388H.5z" />
             <g fill="none" stroke="#1b1464" strokeMiterlimit={10}>
                 <path d="M1203.5 386v2.5h-2.5" />
-                <path strokeDasharray="5.01 5.01" d="M1195.99 388.5H5.51" />
+                <path strokeDasharray="5.01 5.01" d={`M${150 * array.length} 388.5H5.51`} />
                 <path d="M3 388.5H.5V386" />
                 <path strokeDasharray="4.97 4.97" d="M.5 381.03V5.49" />
                 <path d="M.5 3V.5H3" />
-                <path strokeDasharray="5.01 5.01" d="M8.01.5h1190.48" />
+                <path strokeDasharray="5.01 5.01" d={`M8.01.5h${150 * array.length}`} />
                 <path d="M1201 .5h2.5V3" />
-                <path strokeDasharray="4.97 4.97" d="M1203.5 7.97v375.54" />
+                <path strokeDasharray="4.97 4.97" d={`M${150 * array.length} 7.97v375.54`} />
             </g>
             <g fontSize={22} fontFamily="MyriadPro-Regular, Myriad Pro">
-                {buildIndices()}
+                {buildIndices(array)}
             </g>
             <g>
-                {buildSVG()}
+                {buildSVG(array)}
             </g>
         </svg>
     )
