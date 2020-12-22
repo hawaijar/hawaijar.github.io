@@ -6,5 +6,11 @@ socialImage: "/media/image-2.jpg"
 
 
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+![About Hawaijar](/media/image-2.jpg)
 
+By profession, I'm a full-stack engineer with ReactJS and NodeJS technology for quite a long time. Lately, I started loving Java as a back-end alternative, mainly because of its new functional capabilities (from Java 8 onwards) production-proven, time-tested, performance, and well design patterns available out there.
+
+I enjoy learning new technology without involving any un-necessary opinionated debate and discussions. Initially, I was too laser focus on UI technology but with the realization of how important and significant backend API/platform also too, I started walking down (again) the path to understanding more on Microservices (architecture) with Node, Java, and Go ecosystem.
+
+Aside from learning technology, I'm interested in meditation, spiritualism, and reading books.
+I love my family (includes my parents, my siblings and their families) and they're the center of my universe and in that, I find the reason for my existence - will always be there for them no matter what.

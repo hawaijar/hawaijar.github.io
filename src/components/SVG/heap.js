@@ -1,4 +1,5 @@
 import React from 'react';
+import gsap from "gsap";
 
 const {useEffect, useRef} = React;
 const RADIUS = 35.5;
