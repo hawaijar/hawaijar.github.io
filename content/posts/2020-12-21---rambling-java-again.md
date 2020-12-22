@@ -10,7 +10,6 @@ tags:
   - "Core Java"
   - "Language"
 description: "Learning again the most confusing parts of Java, one step at a time - Scope, Package"
-socialImage: "/media/heap.jpg"
 ---
 
   ##ITEM 1: PACKAGE NAMES ARE LIKE FAMILY NAMES

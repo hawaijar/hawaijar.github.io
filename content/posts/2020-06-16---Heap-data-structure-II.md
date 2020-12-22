@@ -2,7 +2,7 @@
 title: My mental model for Heap Structure (Part 2)
 date: "2020-06-16T23:46:37.121Z"
 template: "post"
-draft: false
+draft: true
 slug: "Heap-data-structure-II"
 category: "Data Structure"
 tags:
