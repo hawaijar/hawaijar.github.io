@@ -1,6 +1,6 @@
 ---
 title: I learn today - Collections.checkedList
-date: "2020-12-22T23:46:37.121Z"
+date: "2020-12-22T06:11:49.475Z"
 template: "post"
 draft: false
 slug: "i-learn-today-22-Dec-2020"
@@ -140,5 +140,5 @@ public static void main(String[] args) {
 
   So, here the _Collections.checkedList()_ is nothing more than a (run-time) proxy that checks if there's any unintended operations happen and finds where it happens when such an event occurs. 
 
-  During development time, we can insert that one line ```flowers = Collections.checkedList(flowers, String.class);``` and once everything is clear of any exceptions, we can remove them before pushing the code to production. It's mentioned that there's a cost (slight) involve in using this check method and so it's better to comment out (or remove) before we move to production.
+  During development time, we can insert that one line ```flowers = Collections.checkedList(flowers, String.class);``` and once everything is clear of any exceptions, we can remove them before pushing the code to production. It's mentioned that there's a cost (slight) involve in using this check method and so it's better to comment out (or remove) before we move (our code) to production.
   

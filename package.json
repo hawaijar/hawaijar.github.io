@@ -4,7 +4,7 @@
   "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
   "main": "n/a",
   "scripts": {
-    "develop": "yarn run clean && gatsby develop -p 9000",
+    "develop": "yarn run clean && env-cmd -f .env.development gatsby develop -p 9000",
     "build": "yarn run clean && gatsby build",
     "deploy": "gatsby build && gh-pages -d public --branch master",
     "clean": "rimraf .cache public",
@@ -89,6 +89,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "@babel/core": "7.9.0",
     "@babel/plugin-proposal-class-properties": "7.8.3",
     "@babel/plugin-proposal-optional-chaining": "7.9.0",
