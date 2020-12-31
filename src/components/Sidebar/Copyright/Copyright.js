@@ -10,6 +10,7 @@ const Copyright = ({ copyright }: Props) => (
   <div className={styles['copyright']}>
     {copyright}
   </div>
+
 );
 
 export default Copyright;
