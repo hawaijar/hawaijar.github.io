@@ -64,6 +64,7 @@
     "gatsby-plugin-sitemap": "^2.3.1",
     "gatsby-remark-autolink-headers": "^2.2.1",
     "gatsby-remark-copy-linked-files": "^2.2.1",
+    "gatsby-remark-embed-gist": "^1.2.1",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^3.2.2",
     "gatsby-remark-katex": "^3.2.1",
@@ -89,7 +90,6 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "env-cmd": "^10.1.0",
     "@babel/core": "7.9.0",
     "@babel/plugin-proposal-class-properties": "7.8.3",
     "@babel/plugin-proposal-optional-chaining": "7.9.0",
@@ -103,6 +103,7 @@
     "babel-preset-gatsby": "0.3.1",
     "browserslist": "4.12.0",
     "concurrently": "5.1.0",
+    "env-cmd": "^10.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-plugin-import": "2.20.2",

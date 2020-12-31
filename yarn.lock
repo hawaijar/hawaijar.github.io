@@ -1448,6 +1448,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.11.2":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.10.2":
   version "7.10.2"
   resolved "https://registry.npmjs.org/@babel/standalone/-/standalone-7.10.2.tgz"
@@ -4379,6 +4386,13 @@ async-limiter@~1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/async-limiter/-/async-limiter-1.0.1.tgz"
   integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
+
+async-unist-util-visit@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/async-unist-util-visit/-/async-unist-util-visit-1.0.0.tgz#115c808ef2a5ac6695b691dbb731bbb0ca00e852"
+  integrity sha1-EVyAjvKlrGaVtpHbtzG7sMoA6FI=
+  dependencies:
+    run-async "2.2.0"
 
 async@1.5.2:
   version "1.5.2"
@@ -9561,6 +9575,17 @@ gatsby-remark-copy-linked-files@^2.2.1:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
+gatsby-remark-embed-gist@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-gist/-/gatsby-remark-embed-gist-1.2.1.tgz#d6cc1c48b7670df59e51adecfa910a02e452bf7f"
+  integrity sha512-kBUHsjCObbdejhZ0n+roNe1iAWVj4l7yWLKMNDbTEmVklLcFRuv4koPUruTye1Hxv5j97A/l6aKk1ka2AZ9Wkg==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    async-unist-util-visit "^1.0.0"
+    cheerio "^1.0.0-rc.3"
+    node-fetch "^2.6.0"
+    parse-numeric-range "^1.2.0"
+
 gatsby-remark-external-links@0.0.4:
   version "0.0.4"
   resolved "https://registry.npmjs.org/gatsby-remark-external-links/-/gatsby-remark-external-links-0.0.4.tgz"
@@ -12029,6 +12054,11 @@ is-potential-custom-element-name@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.0.tgz"
   integrity sha1-DFLlS8yjkbssSUsh6GJtczbG45c=
+
+is-promise@^2.1.0:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.2.2.tgz#39ab959ccbf9a774cf079f7b40c7a26f763135f1"
+  integrity sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==
 
 is-regex@^1.0.4, is-regex@^1.0.5:
   version "1.1.0"
@@ -15554,6 +15584,11 @@ parse-numeric-range@^0.0.2:
   resolved "https://registry.npmjs.org/parse-numeric-range/-/parse-numeric-range-0.0.2.tgz"
   integrity sha1-tPCdQTx6282Yf26SM8e0shDJOOQ=
 
+parse-numeric-range@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-1.2.0.tgz#aa70b00f29624ed13e9f943e9461b306e386b0fa"
+  integrity sha512-1q2tXpAOplPxcl8vrIGPWz1dJxxfmdRkCFcpxxMBerDnGuuHalOWF/xj9L8Nn5XoTUoB/6F0CeQBp2fMgkOYFg==
+
 parse-passwd@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/parse-passwd/-/parse-passwd-1.0.0.tgz"
@@ -16800,9 +16835,9 @@ react-datetime@^2.16.3:
     react-onclickoutside "^6.5.0"
 
 react-dev-utils@^4.2.3:
-  version "4.2.2"
-  resolved "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-4.2.2.tgz"
-  integrity sha512-HwN0EE+9DS7wB0kKy6Bc5kUTUGUAOyZorJeb+ZGeTrxd1ZNwEJn1TfCRuNpRRa+Iu3VeYBcQ2pjuordJ4eqmfA==
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
+  integrity sha512-uvmkwl5uMexCmC0GUv1XGQP0YjfYePJufGg4YYiukhqk2vN1tQxwWJIBERqhOmSi80cppZg8mZnPP/kOMf1sUQ==
   dependencies:
     address "1.0.3"
     babel-code-frame "6.26.0"
@@ -18175,6 +18210,14 @@ rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.npmjs.org/rsvp/-/rsvp-4.8.5.tgz"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==
+
+run-async@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.2.0.tgz#8783abd83c7bb86f41ee0602fc82404b3bd6e8b9"
+  integrity sha1-h4Or2Dx7uG9B7gYC/IJASzvW6Lk=
+  dependencies:
+    is-promise "^2.1.0"
+    pinkie-promise "^2.0.0"
 
 run-async@^2.2.0, run-async@^2.4.0:
   version "2.4.1"
