@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Hawaijar]]></title><description><![CDATA[Personal blogs of Hawaijar]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 31 Dec 2020 17:07:39 GMT</lastBuildDate><item><title><![CDATA[I learn today - Event Loop, Message Queue, Job Queue]]></title><description><![CDATA[Understanding Event Loop, Message Queue, Job Queue]]></description><link>https://lumen.netlify.com/posts/i-learn-today-31-Dec-2020</link><guid isPermaLink="false">https://lumen.netlify.com/posts/i-learn-today-31-Dec-2020</guid><pubDate>Thu, 31 Dec 2020 06:09:25 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;Disclaimer&lt;/em&gt;: I don’t have the energy to explain in length these topics. They are the most boring things, at least to me, to spend a day. Given a couple of references below. There’s a lot out there that explains with a lot of fiery energy (including a video) on the net. In this topic, however, I would like to point one thing in particular that I learn it today - &lt;em&gt;Job Queue&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Hawaijar]]></title><description><![CDATA[Personal blogs of Hawaijar]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Jan 2021 17:00:13 GMT</lastBuildDate><item><title><![CDATA[I learn today - Java Exceptions 101]]></title><description><![CDATA[Java Exceptions 101]]></description><link>https://lumen.netlify.com/posts/i-learn-today-05-Jan-2021</link><guid isPermaLink="false">https://lumen.netlify.com/posts/i-learn-today-05-Jan-2021</guid><pubDate>Tue, 05 Jan 2021 06:09:25 GMT</pubDate><content:encoded>&lt;h2 id=&quot;item-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#item-1&quot; aria-label=&quot;item 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ITEM 1:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In Java, anything except primitives is &lt;em&gt;Object&lt;/em&gt; and by that definition, &lt;em&gt;Exceptions&lt;/em&gt; are _Objects. Exceptions indicate that some events that shouldn’t have happened (or intended) occurred in the system.  Broadly, there’re two exceptional events:    &lt;strong&gt;Exceptions and Errors&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exceptions and Errors&lt;/strong&gt; are sub-types of &lt;strong&gt;Throwable&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;		Object
+		  |
+		  |
+	   Throwable
+	     /  \
+ 		/    \
+     Error   Exception
+	 	&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;item-2&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#item-2&quot; aria-label=&quot;item 2 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ITEM 2:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Exceptions are handled by enclosing the expected code/block (that might throw exceptions) with &lt;strong&gt;try&lt;/strong&gt; / &lt;strong&gt;catch or finally&lt;/strong&gt; block. Either &lt;strong&gt;catch&lt;/strong&gt; or &lt;strong&gt;finally&lt;/strong&gt; (or &lt;strong&gt;both&lt;/strong&gt;) is required following the &lt;strong&gt;try&lt;/strong&gt; block. If both are missing following the &lt;strong&gt;try&lt;/strong&gt; block, it’ll be a compilation issue.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;item-3&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#item-3&quot; aria-label=&quot;item 3 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ITEM 3:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There can be multiple &lt;strong&gt;catch block/clause&lt;/strong&gt; following the &lt;strong&gt;try&lt;/strong&gt; block. However, the order of &lt;strong&gt;catch clauses&lt;/strong&gt; matter when they belong to parent/child relationships but not with siblings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What this implies is that, when a try block is followed by multiple &lt;strong&gt;catch clauses/blocks&lt;/strong&gt;, and if they’re related to one another as Parent/Child hierarchy, then they should be arranged bottom up, with the most generic type at the bottom.&lt;/p&gt;
+&lt;p&gt;Here is an example. Imagine A, B, C are types of Exception and A is the root of this relationship. If we need to catch an exception based on them, here’s what we need to layout -&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;	try {
+		...
+		...
+	}
+	catch(C) {
+		...
+	}
+	catch(B) {
+		...
+	}
+	catch(A) {
+		...
+	}
+	finally {
+		// code clean up
+	}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If we reverse the layout with A being at the top, &lt;strong&gt;it will consume exceptions that belong to B and C&lt;/strong&gt; and that doesn’t make sense. So, the compiler will throw a compilation problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;However&lt;/strong&gt;, this rule doesn’t apply when the exceptions are &lt;em&gt;siblings&lt;/em&gt; to one another (not Parent/child type). In that situation, &lt;strong&gt;the order doesn’t matter&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;item-4&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#item-4&quot; aria-label=&quot;item 4 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ITEM 4:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All exceptions (excpept Runtime exceptions and errors) &lt;strong&gt;must be declared or handled&lt;/strong&gt; otherwise, compilation issue will occur as Compiler checks as a rule of &lt;strong&gt;Checked Exception&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Below example will throw a compilation issue -&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// inside a class
+
+function bar() {
+	throw new Exception();
+}
+
+function foo() {
+	bar();
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;However, either &lt;em&gt;declare&lt;/em&gt; or &lt;em&gt;handle&lt;/em&gt; shall avoid compilation issue.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Case 1: Declaring an exception&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function bar() {
+	throw new Exception();
+}
+
+function foo() throws Exception {
+	bar();
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Case 2: Handle an exception&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function bar() {
+	throw new Exception();
+}
+
+function foo(){
+	try {
+		bar();
+	}
+	catch(Exception e) {
+		...
+	}
+	
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;item-5&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#item-5&quot; aria-label=&quot;item 5 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ITEM 5:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Finally clause, if present, runs regardless of whether an exception occurs or not.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;When exception doesn’t occur in &lt;em&gt;try block&lt;/em&gt;, &lt;em&gt;finally&lt;/em&gt; will run&lt;/li&gt;
+&lt;li&gt;When exception occurs and handles in any of the &lt;em&gt;catch block&lt;/em&gt;, &lt;em&gt;finally&lt;/em&gt; will also (run after them)&lt;/li&gt;
+&lt;li&gt;If there is a &lt;em&gt;return&lt;/em&gt; statement inside &lt;em&gt;try/catch&lt;/em&gt; block, &lt;em&gt;finally&lt;/em&gt; will also run (before returning)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;However&lt;/em&gt;, &lt;em&gt;the only condition when finally shall not run is when JVM shuts down. E.g. When there is a System.exit() invocation inside try/catch block, finally shall not be invoked&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;item-6&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#item-6&quot; aria-label=&quot;item 6 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ITEM 6:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Runtime exceptions are never checked by compiler and hence called &lt;strong&gt;Unchecked exceptions&lt;/strong&gt; E.g. &lt;strong&gt;Null Pointer Exception&lt;/strong&gt;, &lt;strong&gt;Arithmetic Exception&lt;/strong&gt;, &lt;strong&gt;ArrayIndexOfBoundException&lt;/strong&gt; etc. - something that compiler can’t check/verify before the code is executed. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In this case, the &lt;em&gt;handle or declare&lt;/em&gt; rule &lt;strong&gt;is not applicable&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;item-7&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#item-7&quot; aria-label=&quot;item 7 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ITEM 7:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Errors&lt;/strong&gt; are not a subtype of Exception, they don’t need to be declared. You’re free to declare it if you like, but the compiler just doesn’t care one way or another when or how the Error is thrown or by whom.&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[I learn today - Event Loop, Message Queue, Job Queue]]></title><description><![CDATA[Understanding Event Loop, Message Queue, Job Queue]]></description><link>https://lumen.netlify.com/posts/i-learn-today-31-Dec-2020</link><guid isPermaLink="false">https://lumen.netlify.com/posts/i-learn-today-31-Dec-2020</guid><pubDate>Thu, 31 Dec 2020 06:09:25 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;Disclaimer&lt;/em&gt;: I don’t have the energy to explain in length these topics. They are the most boring things, at least to me, to spend a day. Given a couple of references below. There’s a lot out there that explains with a lot of fiery energy (including a video) on the net. In this topic, however, I would like to point one thing in particular that I learn it today - &lt;em&gt;Job Queue&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;what-is-an-event-loop&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-is-an-event-loop&quot; aria-label=&quot;what is an event loop permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What is an Event Loop?&lt;/h2&gt;
 &lt;p&gt;To me, I imagine this way - for every javascript file, &lt;strong&gt;in the end&lt;/strong&gt;, there’s an invisible &lt;em&gt;while loop&lt;/em&gt; sitting there to check whether some events had happened and invoke them if that occurred, otherwise exit the loop and terminate the program.&lt;/p&gt;
 &lt;p&gt;Sounds confusing? Here is a rough idea -&lt;/p&gt;
